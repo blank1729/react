@@ -1,0 +1,3 @@
+.circle {
+    background: repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg);
+}

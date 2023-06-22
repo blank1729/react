@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --movement: 50px;
+  --movement-: -50px;
+  --nav-height: calc(100vh-4.5rem);
+}
+
+/* Use this in all the place you are gonna center stuff */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+/* Header css */
+.navlink {
+  @apply text-xl p-2 hover:bg-red-500 hover:text-white duration-200 rounded-md;
+}
+
+/* main part css */
+.right {
+  box-shadow: -50px 50px 0px orange;
+  @apply rounded-lg;
+}
+
+.right p {
+  transform: translate(var(--movement-), var(--movement));
+}
+
+/* Newletter css */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.input {
+  border: 2px solid;
+  @apply border-violet-500 rounded-md text-xl p-1 m-2 text-black px-2;
+}
+
+.button {
+  border: 2px solid;
+  @apply border-violet-500 rounded-md text-xl hover:shadow-lg duration-200;
+}

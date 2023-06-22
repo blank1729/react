@@ -1,0 +1,23 @@
+.article-link {
+    position: relative;
+    width: fit-content;
+}
+
+.article-link::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    top: 100%;
+    border-bottom: 2px solid gray;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.article-link:hover{
+    color: black;
+}
+
+.article-link:hover::before {
+    width: 100%;
+}
