@@ -8,7 +8,7 @@ const FramerMotionPortfolio = () => {
   const location = useLocation();
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <Routes key={location.key} location={location}>
+      <Routes key={location.pathname} location={location}>
         <Route path="/portfolio/" element={<App />}>
           <Route path="one" element={<PortfolioOne />} />
           <Route path="one/projects" element={<Porjects />} />

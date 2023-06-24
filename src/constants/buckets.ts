@@ -8,11 +8,13 @@ export const buckets = [
       { name: "MOALD", link: "/moald" },
       { name: "Portfolio(Framer Motion)", link: "/portfolio/one" },
       { name: "Mizu", link: "/mizu" },
+      { name: "Framer One", link: "/framer-one" },
+      { name: "Admin", link: "/admin-ui" },
     ],
   },
   {
     name: "singlepage",
-    routes: [{ name: "Article", link: "/article" }],
+    routes: [],
   },
   {
     name: "playgrounds",
@@ -20,6 +22,8 @@ export const buckets = [
       { name: "Redux Counter", link: "/redux/counter" },
       { name: "GSAP ScrollTrigger", link: "/scrolltrigger" },
       { name: "Text Animations", link: "/text" },
+      { name: "React Query", link: "/react-query" },
+      { name: "Material UI", link: "/material-ui" },
       // { name: "", link: "" },
     ],
   },
@@ -31,6 +35,7 @@ export const buckets = [
         name: "hidingheader",
         link: "/hidingheader",
       },
+      { name: "Article", link: "/article" },
     ],
   },
   // games

@@ -24,6 +24,10 @@ import HidingHeader from "../collections/random/hidingheader/App";
 import ReduxRoutes from "../collections/playground/redux/routes";
 import RedditRoutes from "../collections/fullsites/reddit-clone/routes";
 import MizuRoutes from "../collections/fullsites/mizu/routes";
+import FramerOneRoutes from "../collections/sites/framer_one/routes";
+import ReactQueryRoutes from "../collections/playground/react-query/routes";
+import AdminUiRoutes from "../collections/fullsites/adminui/routes";
+import MaterialUiRoutes from "../collections/playground/materialui/routes";
 const Moald = lazy(() => import("../collections/fullsites/moald/App"));
 
 const Router = () => {
@@ -39,6 +43,10 @@ const Router = () => {
       <ReduxRoutes />
       <RedditRoutes />
       <MizuRoutes />
+      <FramerOneRoutes />
+      <ReactQueryRoutes />
+      <AdminUiRoutes />
+      <MaterialUiRoutes />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/text" element={<TextAnimation />} />
