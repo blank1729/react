@@ -18,10 +18,10 @@ const Home = () => {
     setUsers(json);
   };
 
-  const selectUser = () => {};
-  const deleteUser = () => {};
+  // const selectUser = () => {};
+  // const deleteUser = () => {};
 
-  const [editId, setEditId] = useState<string | null>();
+  // const [editId, setEditId] = useState<string | null>();
   useEffect(() => {
     getUsers();
   }, []);

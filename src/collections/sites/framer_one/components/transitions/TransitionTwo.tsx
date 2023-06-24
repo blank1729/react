@@ -15,6 +15,7 @@ const TransitionTwo = (Element: () => JSX.Element) => {
     "Item 11",
     "Item 12",
   ];
+
   return (
     <>
       <Element />

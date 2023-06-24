@@ -2,11 +2,8 @@
 
 import {
   AdjustmentsHorizontalIcon,
-  ChevronDoubleDownIcon,
   ChevronDownIcon,
   ListBulletIcon,
-  QueueListIcon,
-  Square2StackIcon,
   Squares2X2Icon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";

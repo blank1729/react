@@ -1,7 +1,4 @@
-import React, { useContext } from "react";
 import List from "./List";
-import { course } from "./types";
-import ThemeProvider, { themecontext } from "../state/context/ThemeContext";
 import { list } from "./data/courses";
 import Search from "./components/Search";
 

@@ -2,44 +2,43 @@ import React, { useRef } from "react";
 import Card from "./Cards/Card";
 
 const Slider = () => {
+  const slider = useRef<HTMLDivElement>(null);
+  const innerSlider = useRef<HTMLDivElement>(null);
 
-const slider = useRef<HTMLDivElement>(null);
-const innerSlider = useRef<HTMLDivElement>(null);
+  let dragging = false;
+  // let startx : number = 0
+  let x: number | null;
 
-let dragging = false
-let startx : number = 0
-let x : number | null
-
-const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault()
-    dragging = true
-    console.log(slider.current)
-    if ( slider.current ){
-        slider.current.style.cursor = "dragging"
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    dragging = true;
+    console.log(slider.current);
+    if (slider.current) {
+      slider.current.style.cursor = "dragging";
     }
-}
+  };
 
-const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
-    dragging = false
-    if ( slider.current ){
-        slider.current.style.cursor = "drag"
+  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    dragging = false;
+    if (slider.current) {
+      slider.current.style.cursor = "drag";
     }
-}
+  };
 
-const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault()
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
     // https://stackoverflow.com/questions/35360704/wrong-offsetx-and-offsety-on-mousedown-event-of-parent-element
-    if ( innerSlider.current && dragging ) {
-        if (x == null) {
-            x = e.clientX
-            return
-        }
-        let change = e.clientX - x
-        x = e.clientX
-        let left = parseInt(innerSlider.current.style.left.slice(0,-2))
-        innerSlider.current.style.left = `${left + change}px`
+    if (innerSlider.current && dragging) {
+      if (x == null) {
+        x = e.clientX;
+        return;
+      }
+      let change = e.clientX - x;
+      x = e.clientX;
+      let left = parseInt(innerSlider.current.style.left.slice(0, -2));
+      innerSlider.current.style.left = `${left + change}px`;
     }
-    
 
     // let offsetX = e.clientX - rect.left - startx
     // startx = offsetX
@@ -49,16 +48,14 @@ const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     // if (innerSlider.current && dragging) {
     //     innerSlider.current.style.left = `${offsetX}px`
     // }
-}
-
-
+  };
 
   return (
     <div
       ref={slider}
       className="slider max-w-full overflow-x-scroll p-4 border-slate-700 border-4"
       style={{
-        cursor : "grab",
+        cursor: "grab",
       }}
     >
       <div

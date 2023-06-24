@@ -1,4 +1,4 @@
-import React, { MouseEvent, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 const Slider4: React.FC = () => {
   const slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"]; // Set your slide content here
@@ -14,38 +14,38 @@ const Slider4: React.FC = () => {
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     // mouse down
     isDragging = true;
-    if (innerSliderRef.current){
-        StartX = e.clientX - innerSliderRef.current.offsetLeft;
+    if (innerSliderRef.current) {
+      StartX = e.clientX - innerSliderRef.current.offsetLeft;
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     // started moving
-    e.preventDefault()
-    let change = e.clientX - StartX
+    e.preventDefault();
+    let change = e.clientX - StartX;
     if (innerSliderRef.current && isDragging) {
-        innerSliderRef.current.style.left = `${change}px`
+      innerSliderRef.current.style.left = `${change}px`;
     }
-    checkBoundry()
-  }
+    checkBoundry();
+  };
 
-//   boundry check
-  function checkBoundry(){
+  //   boundry check
+  function checkBoundry() {
     if (sliderRef.current && innerSliderRef.current) {
-        let inner = innerSliderRef.current.getBoundingClientRect()
-        let outer = sliderRef.current.getBoundingClientRect()
-        if (parseInt(innerSliderRef.current.style.left) > 0){
-            innerSliderRef.current.style.left = '0px'
-        } else if (inner.right < outer.right ) {
-            // this I didn't understand yet
-            innerSliderRef.current.style.left = `-${inner.width - outer.width}px`
-        }
+      let inner = innerSliderRef.current.getBoundingClientRect();
+      let outer = sliderRef.current.getBoundingClientRect();
+      if (parseInt(innerSliderRef.current.style.left) > 0) {
+        innerSliderRef.current.style.left = "0px";
+      } else if (inner.right < outer.right) {
+        // this I didn't understand yet
+        innerSliderRef.current.style.left = `-${inner.width - outer.width}px`;
+      }
     }
   }
 
   const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
-      isDragging = false;   
-    
+    e.preventDefault();
+    isDragging = false;
   };
 
   return (

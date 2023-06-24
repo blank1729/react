@@ -1,5 +1,3 @@
-import React from "react";
-
 function Studio() {
   return (
     <div className="w-screen grid grid-cols-10 h-[calc(100vh-5rem)] bg-slate-200 text-white">
@@ -19,9 +17,7 @@ function Studio() {
       <main className="h-full col-span-9 p-2 grid grid-flow-row grid-rows-6 gap-y-4">
         {/* Projects */}
         <div className="row-span-4 border-2 border-green-600 overflow-scroll">
-          <div  className=" text-black h-full" >
-            p something
-          </div>
+          <div className=" text-black h-full">p something</div>
         </div>
         {/* bottom timeline */}
         <div className="grid grid-flow-row w-full row-span-2 border-2 border-green-600 gap-y-2">

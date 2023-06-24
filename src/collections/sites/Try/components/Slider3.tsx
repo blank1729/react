@@ -1,4 +1,4 @@
-import React, { MouseEvent, useRef, useState } from "react";
+import React, { useRef } from "react";
 
 const Slider: React.FC = () => {
   const slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"]; // Set your slide content here
@@ -15,11 +15,11 @@ const Slider: React.FC = () => {
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     isDragging = true;
     StartX = e.clientX;
-    if ( sliderRef.current ){
-      sliderRef.current.scrollLeft += 50
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft += 50;
     }
-    console.log("left :", (e.currentTarget as HTMLDivElement).offsetLeft)
-    console.log("document height is " ,document.body.scrollHeight)
+    console.log("left :", (e.currentTarget as HTMLDivElement).offsetLeft);
+    console.log("document height is ", document.body.scrollHeight);
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -60,9 +60,12 @@ const Slider: React.FC = () => {
       console.log(innerSliderRef.current.style.left);
 
       if (
-        innerSliderRef.current.offsetLeft + change <= sliderRef.current.offsetLeft 
+        innerSliderRef.current.offsetLeft + change <=
+        sliderRef.current.offsetLeft
       ) {
-        innerSliderRef.current.style.left = `${leftRelativeToSlider + change}px`;
+        innerSliderRef.current.style.left = `${
+          leftRelativeToSlider + change
+        }px`;
         StartX = e.clientX;
       } else {
         innerSliderRef.current.style.left = `${0}px`;

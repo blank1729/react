@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Kanban from "../sites/DragDrop/DragDrop";
 import Studio from "../sites/studio/Studio";

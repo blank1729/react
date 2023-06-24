@@ -1,54 +1,55 @@
-import React, { useState } from 'react'
-import { useTemp } from '../../hooks/useTemp'
+import { useState } from "react";
+import { useTemp } from "../../common/hooks/useTemp";
 
 const HomePage = () => {
+  const [temp, setTemp] = useState<number>(0);
 
-    const [temp , setTemp] = useState<number>(0)
-    
-    async function doSomething() {
-        const temp = await useTemp();
-        console.log(`The current temperature is ${temp}°C`);
-        setTemp(temp)
-      }
-      
-    doSomething();
+  async function doSomething() {
+    const temp = await useTemp();
+    console.log(`The current temperature is ${temp}°C`);
+    setTemp(temp);
+  }
 
-    return (
+  doSomething();
+
+  return (
     <>
-    <main className='text-white bg-gray-500 w-screen h-screen'>
-        <h1 className='text-3xl font-bold'>HOME PAGE</h1>
+      <main className="text-white bg-gray-500 w-screen h-screen">
+        <h1 className="text-3xl font-bold">HOME PAGE</h1>
 
         {/* temprature */}
-        <div className='border-3 border-white w-[100px] h-[100px] rounded-md flex justify-center items-center text-3xl font-bold '>
-            <p>{temp}&#176;C</p>
+        <div className="border-3 border-white w-[100px] h-[100px] rounded-md flex justify-center items-center text-3xl font-bold ">
+          <p>{temp}&#176;C</p>
         </div>
-
 
         {/* links */}
 
-        <div className='flex gap-2'>
-            <a href="https://youtube.com" className=''>
-                <img src="https://youtube.com/favicon.ico" className='w-8' alt="Youtube Icon" />
-            </a>
+        <div className="flex gap-2">
+          <a href="https://youtube.com" className="">
+            <img
+              src="https://youtube.com/favicon.ico"
+              className="w-8"
+              alt="Youtube Icon"
+            />
+          </a>
 
-            <a href="https://4anime.is" className=''>
-                <img src="https://4anime.is/images/logo.png" className='w-8' alt="4anime Icon" />
-            </a>
+          <a href="https://4anime.is" className="">
+            <img
+              src="https://4anime.is/images/logo.png"
+              className="w-8"
+              alt="4anime Icon"
+            />
+          </a>
         </div>
 
         {/* Todo-List */}
-        <div>
-
-        </div>
+        <div></div>
 
         {/* Bitcoin and Index Prices */}
-        <div>
-            
-        </div>
-
-    </main>
+        <div></div>
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

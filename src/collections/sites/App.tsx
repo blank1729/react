@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./App.css";
-import { MotionConfig, animate, motion, transform } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const navLinks = [
   { to: "/febaradio", text: "FebaRadio" },

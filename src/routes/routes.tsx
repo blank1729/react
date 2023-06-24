@@ -7,7 +7,7 @@ import TextAnimation from "../collections/playground/text/App";
 import TimelineContainer from "../collections/sites/VideoTimeline/TimelineContainer";
 
 // lazy imports
-const Counter = lazy(() => import("../collections/playground/redux/counter"));
+// const Counter = lazy(() => import("../collections/playground/redux/counter"));
 const Article = lazy(() => import("../collections/singlepage/article/Article"));
 const GSAPScrollTrigger = lazy(
   () => import("../collections/playground/gsapscrolltrigger/scrolltrigger")

@@ -1,15 +1,20 @@
-import React from "react";
-
 type TimelineElementProps = {
   name: string;
   width: number;
   color: string;
   id: string;
-  handleMousedown : (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  handleMouseUp : (e : React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  handleMousedown: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  handleMouseUp: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-function TimelineElement({ name, width, color, id, handleMousedown, handleMouseUp }: TimelineElementProps) {
+function TimelineElement({
+  name,
+  width,
+  color,
+  id,
+  handleMousedown,
+  handleMouseUp,
+}: TimelineElementProps) {
   return (
     // [css - Adding a className using variables (HTML, ReactJS) - Stack Overflow](https://stackoverflow.com/questions/61527695/adding-a-classname-using-variables-html-reactjs)
     <div

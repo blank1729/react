@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import UseState from "./Components/UseState";
 
 const Index = () => {

@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { course } from "./types";
-import Modal from "../other/Modal";
 
 function List({ list }: { list: Array<course> }) {
-  const [show, setShow] = useState<boolean>(false);
+  // const [show, setShow] = useState<boolean>(false);
   const [id, setId] = useState<string>("");
+
+  console.log(id);
+
   return (
     <div className="pt-4">
       {list.map((course) => (
@@ -21,7 +23,6 @@ function List({ list }: { list: Array<course> }) {
           <div>{course.season}</div>
         </div>
       ))}
-
     </div>
   );
 }
