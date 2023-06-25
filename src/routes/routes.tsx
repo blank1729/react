@@ -28,6 +28,7 @@ import FramerOneRoutes from "../collections/sites/framer_one/routes";
 import ReactQueryRoutes from "../collections/playground/react-query/routes";
 import AdminUiRoutes from "../collections/fullsites/adminui/routes";
 import MaterialUiRoutes from "../collections/playground/materialui/routes";
+import HomeTwo from "../HomeTwo";
 const Moald = lazy(() => import("../collections/fullsites/moald/App"));
 
 const Router = () => {
@@ -48,7 +49,7 @@ const Router = () => {
       <AdminUiRoutes />
       <MaterialUiRoutes />
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<HomeTwo />} />
         <Route path="/text" element={<TextAnimation />} />
         <Route path="/timeline" element={<TimelineContainer />} />
         <Route path="/article" element={<Article />} />

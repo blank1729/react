@@ -13,10 +13,6 @@ export const buckets = [
     ],
   },
   {
-    name: "singlepage",
-    routes: [],
-  },
-  {
     name: "playgrounds",
     routes: [
       { name: "Redux Counter", link: "/redux/counter" },
