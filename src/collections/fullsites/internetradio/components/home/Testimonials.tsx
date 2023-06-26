@@ -1,6 +1,6 @@
 const Testimonials = () => {
   return (
-    <section className="min-h-[70vh]">
+    <section className="section min-h-[70vh]">
       <div className="grid gap-y-6 items-center">
         <h2 className="text-4xl md:text-6xl font-semibold mb-6">
           Testimonials

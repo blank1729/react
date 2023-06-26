@@ -12,7 +12,7 @@ const Hero = () => {
   const [isPlaying, setIsPlaying] = useAtom(isPlayingAtom);
   const audio = useAtomValue(audioAtom);
   return (
-    <section className="h-[calc(90vh-3rem)]">
+    <section className="section h-[calc(90vh-3rem)]">
       <div className="grid items-center w-full">
         <div className="space-y-4 lg:space-y-6 mb-4">
           <h1 className="group text-4xl  sm:text-6xl lg:text-8xl font-bold flex items-center">

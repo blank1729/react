@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="h-[calc(90vh-3rem)]">
+    <section className="section h-[calc(90vh-3rem)]">
       <div className="grid items-center w-full">
         <div className="space-y-4 lg:space-y-6 mb-4">
           <h2 className="text-4xl lg:text-6xl font-semibold mb-8 md:mb-12">

@@ -16,7 +16,7 @@ const programs = [
 
 const OurPrograms = () => {
   return (
-    <section className="py-20">
+    <section className="section py-20">
       <div className="w-full grid items-center">
         <h3 className="text-4xl lg:text-6xl font-semibold mb-8 lg:mb-16">
           Our Programs

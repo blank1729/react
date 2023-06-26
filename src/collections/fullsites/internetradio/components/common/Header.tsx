@@ -7,7 +7,7 @@ const Header = () => {
   const location = useLocation();
   const onair = true;
   return (
-    <header className="py-4 relative shadow-sm border-b border-black">
+    <header className="header py-4 relative shadow-sm border-b border-black">
       <div className="absolute w-full h-full z-20 bg-white"></div>
       <nav className="w-full flex justify-between items-center z-30">
         <div className="w-full flex items-center z-30 justify-between">

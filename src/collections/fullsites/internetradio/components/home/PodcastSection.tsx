@@ -1,5 +1,9 @@
 const PodcastSection = () => {
-  return <div>PodcastSection</div>;
+  return (
+    <section className="section ">
+      <div>podcasts</div>
+    </section>
+  );
 };
 
 export default PodcastSection;

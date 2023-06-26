@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* section {
+.section {
   @apply flex justify-center items-center px-4 sm:px-8 md:px-16 lg:px-[20%];
 }
-header,
-footer {
+.header,
+.footer {
   @apply flex justify-center items-center px-4 sm:px-8 md:px-16 lg:px-[12%];
 }
 
 ::selection {
   background-color: rgb(255, 123, 123);
-} */
+}

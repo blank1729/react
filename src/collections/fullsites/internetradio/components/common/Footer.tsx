@@ -17,7 +17,7 @@ const links = [
 const Footer = () => {
   return (
     <>
-      <footer className="shadow-md border-t border-black">
+      <footer className="footer shadow-md border-t border-black">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 items-start py-10 gap-x-4 gap-y-8 lg:gap-8">
           {/* Follow US */}
           <div className="sm:col-span-2 grid gap-y-4">
