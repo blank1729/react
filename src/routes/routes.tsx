@@ -1,14 +1,11 @@
 import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-// component imports
-import App from "../App";
 import TextAnimation from "../collections/playground/text/App";
-import TimelineContainer from "../collections/sites/VideoTimeline/TimelineContainer";
 
 // lazy imports
 // const Counter = lazy(() => import("../collections/playground/redux/counter"));
-const Article = lazy(() => import("../collections/singlepage/article/Article"));
+const Article = lazy(() => import("../collections/fullsites/article/Article"));
 const GSAPScrollTrigger = lazy(
   () => import("../collections/playground/gsapscrolltrigger/scrolltrigger")
 );
@@ -29,6 +26,16 @@ import ReactQueryRoutes from "../collections/playground/react-query/routes";
 import AdminUiRoutes from "../collections/fullsites/adminui/routes";
 import MaterialUiRoutes from "../collections/playground/materialui/routes";
 import HomeTwo from "../HomeTwo";
+import ChickenShootRoutes from "../collections/fullsites/chicken-shoot/routes";
+import AboutRoutes from "../collections/fullsites/about/routes";
+import ViditRoutes from "../collections/fullsites/vidit/routes";
+import ReactPlaygroundRoutes from "../collections/playground/react/routes";
+import VideoEditorRoutes from "../sites/video-editor/routes";
+import GeneralRoutes from "../sites/general/Routes/AnimatedRoutes";
+import PaginationRoutes from "../sites/pagination/routes";
+import SociopediaRoutes from "../sites/sociopedia/routes";
+import PortfolioOne from "../collections/fullsites/portfolio/pages/home";
+import PortfolioRoutes from "../sites/portfolio/routes";
 const Moald = lazy(() => import("../collections/fullsites/moald/App"));
 
 const Router = () => {
@@ -48,15 +55,23 @@ const Router = () => {
       <ReactQueryRoutes />
       <AdminUiRoutes />
       <MaterialUiRoutes />
+      <ChickenShootRoutes />
+      <AboutRoutes />
+      <ViditRoutes />
+      <ReactPlaygroundRoutes />
+      <VideoEditorRoutes />
+      <GeneralRoutes />
+      <PaginationRoutes />
       <Routes>
         <Route path="/" element={<HomeTwo />} />
         <Route path="/text" element={<TextAnimation />} />
-        <Route path="/timeline" element={<TimelineContainer />} />
         <Route path="/article" element={<Article />} />
         <Route path="/scrolltrigger" element={<GSAPScrollTrigger />} />
         <Route path="/moald" element={<Moald />} />
         <Route path="/hidingheader" element={<HidingHeader />} />
       </Routes>
+      <SociopediaRoutes />
+      <PortfolioRoutes />
     </BrowserRouter>
   );
 };

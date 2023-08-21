@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { buckets } from "./constants/buckets";
+import { buckets } from "./routes/buckets";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 
 const HomeTwo = () => {

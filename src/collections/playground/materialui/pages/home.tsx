@@ -1,11 +1,26 @@
 import { Helmet } from "react-helmet";
 import MuiIcon from "../assets/mui.svg";
-import { Button, Container, Typography } from "@mui/material";
-import { SettingsVoiceOutlined } from "@mui/icons-material";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  IconButton,
+  Stack,
+  Typography,
+} from "@mui/material";
+import {
+  AlignHorizontalCenter,
+  AlignHorizontalLeft,
+  AlignHorizontalRight,
+  SendAndArchiveRounded,
+  SendAndArchiveTwoTone,
+  SettingsVoiceOutlined,
+} from "@mui/icons-material";
 import { theme } from "../theme";
 import SideBar from "../components/home/SideBar";
 import RightBar from "../components/home/RightBar";
 import Feed from "../components/home/Feed";
+import TypographyComponent from "../components/Typography";
 
 const Home = () => {
   return (
@@ -23,6 +38,39 @@ const Home = () => {
         <Feed />
         <RightBar />
       </Container>
+
+      <TypographyComponent />
+
+      <Stack direction="row" spacing={2}>
+        <Button variant="outlined">Outlined</Button>
+        <Button variant="contained" size="small" color="warning">
+          Warning Contained
+        </Button>
+        <Button variant="text">Text</Button>
+        <Button
+          variant="outlined"
+          color="error"
+          endIcon={<SendAndArchiveRounded />}
+          disableElevation
+          disableRipple
+        >
+          Text
+        </Button>
+        <IconButton>
+          <SendAndArchiveTwoTone />
+        </IconButton>
+      </Stack>
+      <ButtonGroup variant="outlined">
+        <IconButton>
+          <AlignHorizontalLeft />
+        </IconButton>
+        <IconButton>
+          <AlignHorizontalCenter />
+        </IconButton>
+        <IconButton>
+          <AlignHorizontalRight />
+        </IconButton>
+      </ButtonGroup>
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { buckets } from "./constants/buckets";
+import { buckets } from "./routes/buckets";
 import HomeLink from "./collections/common/components/common/homelink";
 import { Helmet } from "react-helmet";
 import Icon from "./assets/icon.svg";
