@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTemp } from "../../common/hooks/useTemp";
+import { useTemp } from "../../../hooks/useTemp";
 
 const HomePage = () => {
   const [temp, setTemp] = useState<number>(0);

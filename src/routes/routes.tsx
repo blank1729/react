@@ -34,8 +34,11 @@ import VideoEditorRoutes from "../sites/video-editor/routes";
 import GeneralRoutes from "../sites/general/Routes/AnimatedRoutes";
 import PaginationRoutes from "../sites/pagination/routes";
 import SociopediaRoutes from "../sites/sociopedia/routes";
-import PortfolioOne from "../collections/fullsites/portfolio/pages/home";
 import PortfolioRoutes from "../sites/portfolio/routes";
+import RestaurantRoutes from "../sites/restaurant/routes";
+import EcommerceRoutes from "../sites/ecommerce/routes";
+import ChakraUIRoutes from "../playground/chakraui/routes";
+import AdminUI from "../pages/AdminUI/AdminUI";
 const Moald = lazy(() => import("../collections/fullsites/moald/App"));
 
 const Router = () => {
@@ -62,6 +65,8 @@ const Router = () => {
       <VideoEditorRoutes />
       <GeneralRoutes />
       <PaginationRoutes />
+      <EcommerceRoutes />
+      <ChakraUIRoutes />
       <Routes>
         <Route path="/" element={<HomeTwo />} />
         <Route path="/text" element={<TextAnimation />} />
@@ -69,9 +74,11 @@ const Router = () => {
         <Route path="/scrolltrigger" element={<GSAPScrollTrigger />} />
         <Route path="/moald" element={<Moald />} />
         <Route path="/hidingheader" element={<HidingHeader />} />
+        <Route path="/adminui" element={<AdminUI />} />
       </Routes>
       <SociopediaRoutes />
       <PortfolioRoutes />
+      <RestaurantRoutes />
     </BrowserRouter>
   );
 };

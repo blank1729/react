@@ -1,61 +1,9 @@
 import { useEffect, useState } from "react";
 import Container from "../components/Container";
-
-const projects = [
-  {
-    name: "Expense Tracker",
-    skills: ["NextJS", "React-Query", "golang", "Typescript"],
-  },
-  {
-    name: "E-commerce Website",
-    skills: ["React", "NodeJS", "MongoDB"],
-  },
-  {
-    name: "Social Media App",
-    skills: ["React", "Firebase", "Redux"],
-  },
-  {
-    name: "Task Management System",
-    skills: ["Vue.js", "Node.js", "SQL"],
-  },
-  {
-    name: "Travel Planning App",
-    skills: ["Angular", "Firebase", "RxJS"],
-  },
-  {
-    name: "Portfolio Website",
-    skills: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    name: "Online Learning Platform",
-    skills: ["Django", "Python", "PostgreSQL"],
-  },
-  {
-    name: "Weather App",
-    skills: ["React Native", "Expo", "APIs"],
-  },
-  {
-    name: "Health and Fitness Tracker",
-    skills: ["Swift", "Core Data", "HealthKit"],
-  },
-  {
-    name: "Music Streaming Service",
-    skills: ["Node.js", "Express", "MongoDB"],
-  },
-  {
-    name: "Recipe Sharing Platform",
-    skills: ["Ruby on Rails", "PostgreSQL", "Heroku"],
-  },
-  {
-    name: "Real-time Chat Application",
-    skills: ["Flutter", "Firebase", "WebSocket"],
-  },
-];
-
-interface project {
-  name: string;
-  skills: string[];
-}
+import { projects } from "../data/projects";
+import { projectType } from "../types/types";
+import SkillTag from "../components/home/SkillTag";
+import ProjectCard from "../components/home/projectCard";
 
 // You can access each project like this:
 console.log(projects[0]); // Outputs the first project
@@ -63,7 +11,9 @@ console.log(projects[0]); // Outputs the first project
 const Home = () => {
   const [skills, setSkills] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Array<project>>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Array<projectType>>(
+    []
+  );
 
   useEffect(() => {
     const allSkills = projects.reduce((accSkills: string[], project) => {
@@ -118,36 +68,17 @@ const Home = () => {
 
         {/* contains projects with skills */}
         <section className="min-h-screen py-10">
-          <div className="flex gap-1 flex-wrap overflow-scroll">
+          <div className="flex gap-1 flex-wrap">
             {/* skills */}
             {skills.map((skill) => (
-              <label
-                key={skill}
-                className="rounded-2xl cursor-pointer transition relative flex-shrink-0 hover:bg-blue-400"
-              >
-                <input
-                  type="checkbox"
-                  name={skill}
-                  value={skill}
-                  className="peer hidden"
-                  onChange={handleChange}
-                />
-                <div className="peer-checked:bg-blue-400 w-full h-full px-4 rounded-2xl">
-                  {skill}
-                </div>
-              </label>
+              <SkillTag skill={skill} handleChange={handleChange} />
             ))}
           </div>
 
           {/* projects */}
           <div className="grid md:grid-cols-3 gap-1 my-8">
             {filteredProjects.map((p) => (
-              <div
-                key={p.name}
-                className="h-20 bg-red-400 flex justify-center items-center rounded-lg"
-              >
-                {p.name}
-              </div>
+              <ProjectCard project={p} />
             ))}
           </div>
         </section>

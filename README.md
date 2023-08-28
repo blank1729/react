@@ -4,8 +4,4 @@ This is where I do all my react experiments, this has a lots of packages pre ins
 
 
 
-1. where to inject the reset.css file
-
-
-
 

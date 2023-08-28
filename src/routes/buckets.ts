@@ -18,6 +18,9 @@ export const buckets = [
       { name: "general gallery", link: "/general/gallery" },
       { name: "Sociopedia", link: "/social" },
       { name: "Portfolio", link: "/portfolio" },
+      { name: "Food Place", link: "/foodplace" },
+      { name: "Ecommerce", link: "/ecommerce" },
+      { name: "Chakra UI Playground", link: "/chakraui" },
     ],
   },
   {
@@ -45,4 +48,9 @@ export const buckets = [
   },
   // games
   // tools
+  // pages
+  {
+    name: "pages",
+    routes: [{ name: "Admin UI", link: "/adminui" }],
+  },
 ];

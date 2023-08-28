@@ -2,21 +2,20 @@ import { Outlet } from "react-router-dom";
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import { Helmet } from "react-helmet";
-import MuiIcon from "../assets/mui.svg";
-import HomeLink from "../src/collections/common/components/common/homelink";
+import HomeLink from "../../collections/common/components/common/homelink";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const App = () => {
   <Helmet>
     <title>Something</title>
-    <link rel="icon" href={MuiIcon} type="image/svg" />
   </Helmet>;
   return (
-    <>
+    <ChakraProvider>
       <Header />
       <Outlet />
       <Footer />
       <HomeLink />
-    </>
+    </ChakraProvider>
   );
 };
 
